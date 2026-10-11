@@ -20,6 +20,13 @@ jobs:
           distribution: temurin
           java-version: 17
 
+      - name: Arrange files
+        run: |
+          mkdir -p www resources
+          [ -f www/index.html ] || cp index.html www/index.html
+          [ -f resources/icon.png ] || cp icon.png resources/icon.png
+          ls
+
       - name: Install dependencies
         run: npm install
 
@@ -35,15 +42,15 @@ jobs:
           elif [ -f google-services.json ]; then
             cp google-services.json android/app/google-services.json
           else
-            echo "::error::google-services.json পাওয়া যায়নি (repo root এ রাখো, অথবা GOOGLE_SERVICES_JSON_B64 secret দাও)"
+            echo "::error::google-services.json পাওয়া যায়নি (repo root এ রাখো)"
             exit 1
           fi
 
       - name: App icons
-        run: bash scripts/make_icons.sh
+        run: bash make_icons.sh
 
       - name: Add home-screen widgets
-        run: python3 scripts/patch_android.py
+        run: python3 patch_android.py
 
       - name: Sync web assets and plugins
         run: npx cap sync android
