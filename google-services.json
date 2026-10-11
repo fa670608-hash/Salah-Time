@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "266656159015",
+    "firebase_url": "https://salah-time-d5662-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "salah-time-d5662",
+    "storage_bucket": "salah-time-d5662.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:266656159015:android:11686c38012be8277c0502",
+        "android_client_info": {
+          "package_name": "com.bjdfarhma.salah"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDEdMCtC4mKUCsJV08JgIVbnGQjvbXqYcM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
