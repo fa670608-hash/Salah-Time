@@ -1,0 +1,14 @@
+{
+  "appId": "com.bjdfarhma.salah",
+  "appName": "Salah Time",
+  "webDir": "www",
+  "plugins": {
+    "PushNotifications": {
+      "presentationOptions": [
+        "badge",
+        "sound",
+        "alert"
+      ]
+    }
+  }
+}
