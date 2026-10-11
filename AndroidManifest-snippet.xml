@@ -1,0 +1,37 @@
+<!-- ============================================================
+  android/app/src/main/AndroidManifest.xml এ বসাতে হবে
+  ============================================================ -->
+
+<!-- (১) <activity android:name=".MainActivity" ...> এর ভেতরে, আগের intent-filter এর নিচে এই filter যোগ করো -->
+<intent-filter>
+    <action android:name="android.intent.action.VIEW"/>
+    <category android:name="android.intent.category.DEFAULT"/>
+    <category android:name="android.intent.category.BROWSABLE"/>
+    <data android:scheme="salahtime" android:host="tab"/>
+</intent-filter>
+
+<!-- (২) <manifest> এর ভেতরে, <application> এর আগে (না থাকলে) -->
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+
+<!-- (৩) </activity> এর পরে, </application> এর আগে এগুলো বসাও -->
+<receiver android:name="com.salahtime.widget.WidgetA" android:exported="true" android:label="সালাহ টাইম – ১">
+    <intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE"/></intent-filter>
+    <meta-data android:name="android.appwidget.provider" android:resource="@xml/salah_widget_a_info"/>
+</receiver>
+<receiver android:name="com.salahtime.widget.WidgetB" android:exported="true" android:label="সালাহ টাইম – ২ (কাউন্টডাউন)">
+    <intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE"/></intent-filter>
+    <meta-data android:name="android.appwidget.provider" android:resource="@xml/salah_widget_b_info"/>
+</receiver>
+<receiver android:name="com.salahtime.widget.WidgetC" android:exported="true" android:label="সালাহ টাইম – ৩ (শর্টকাট)">
+    <intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE"/></intent-filter>
+    <meta-data android:name="android.appwidget.provider" android:resource="@xml/salah_widget_c_info"/>
+</receiver>
+<receiver android:name="com.salahtime.widget.TickReceiver" android:exported="false">
+    <intent-filter>
+        <action android:name="android.intent.action.BOOT_COMPLETED"/>
+        <action android:name="android.intent.action.TIME_SET"/>
+        <action android:name="android.intent.action.TIMEZONE_CHANGED"/>
+        <action android:name="android.intent.action.DATE_CHANGED"/>
+        <action android:name="android.intent.action.MY_PACKAGE_REPLACED"/>
+    </intent-filter>
+</receiver>

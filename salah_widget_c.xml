@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root" android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical" android:background="@drawable/sw_bg" android:padding="14dp">
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+            <TextView android:id="@+id/tvHijri" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textColor="#1A1A1A" android:textSize="15sp" android:textStyle="normal" android:maxLines="1" />
+            <TextView android:id="@+id/tvGreg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textColor="#4A4A4A" android:textSize="13sp" android:textStyle="normal" android:maxLines="1" />
+        </LinearLayout>
+        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="vertical" android:gravity="end">
+            <TextView android:id="@+id/tvSunrise" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textColor="#1A1A1A" android:textSize="14sp" android:textStyle="bold" android:maxLines="1" />
+            <TextView android:id="@+id/tvSunset" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textColor="#1A1A1A" android:textSize="14sp" android:textStyle="bold" android:maxLines="1" />
+        </LinearLayout>
+    </LinearLayout>
+    <TextView android:id="@+id/tvRange" android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center" android:textColor="#1B6B3A" android:textSize="24sp" android:textStyle="bold" android:maxLines="1" android:layout_marginTop="8dp" android:layout_marginBottom="8dp"/>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+        <TextView android:id="@+id/b0" android:layout_width="0dp" android:layout_height="40dp" android:layout_weight="1" android:layout_marginStart="0dp" android:background="@drawable/sw_btn" android:gravity="center" android:textSize="20sp"/>
+        <TextView android:id="@+id/b1" android:layout_width="0dp" android:layout_height="40dp" android:layout_weight="1" android:layout_marginStart="8dp" android:background="@drawable/sw_btn" android:gravity="center" android:textSize="20sp"/>
+        <TextView android:id="@+id/b2" android:layout_width="0dp" android:layout_height="40dp" android:layout_weight="1" android:layout_marginStart="8dp" android:background="@drawable/sw_btn" android:gravity="center" android:textSize="20sp"/>
+        <TextView android:id="@+id/b3" android:layout_width="0dp" android:layout_height="40dp" android:layout_weight="1" android:layout_marginStart="8dp" android:background="@drawable/sw_btn" android:gravity="center" android:textSize="20sp"/>
+        <TextView android:id="@+id/b4" android:layout_width="0dp" android:layout_height="40dp" android:layout_weight="1" android:layout_marginStart="8dp" android:background="@drawable/sw_btn" android:gravity="center" android:textSize="20sp"/>
+    </LinearLayout>
+</LinearLayout>
